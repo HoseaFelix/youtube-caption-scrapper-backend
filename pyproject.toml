@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "youtube-caption-extractor"
+version = "0.1.0"
+description = "A Flask API for extracting and formatting YouTube video captions"
+authors = ["Your Name <your.email@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "^2.3.3"
+flask-cors = "^4.0.0"
+gunicorn = "^21.2.0"
+youtube-transcript-api = "^0.6.1"
+werkzeug = "^2.3.7"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

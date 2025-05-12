@@ -6,6 +6,8 @@ from flask_cors import CORS
 from caption_service import extract_captions, format_captions, validate_youtube_url
 from werkzeug.middleware.proxy_fix import ProxyFix
 
+print('running...')
+
 # Create and configure the Flask application
 app = Flask(__name__)
 app.secret_key = os.environ.get("SESSION_SECRET")
@@ -102,3 +104,6 @@ def server_error(error):
         'error': 'Server error',
         'message': 'An internal server error occurred'
     }), 500
+
+if __name__ == '__main__':
+    app.run(debug=True)
